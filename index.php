@@ -9,7 +9,7 @@
     <h1> 영화 다운로드 </h1>
         <ol>
         <?php
-        $list = scandir('movie_data');
+        $list = scandir('movie');
         $i = 0;
         while($i < count($list)){
             if($list[$i] != '.'){
