@@ -1,6 +1,6 @@
 <?php
 $filename = $_GET["filename"];
-$path = "./movie_data/$filename";
+$path = "./movie/$filename";
 $real_filename=urldecode("$filename");
 header("Content_Type: application/x-octeststream");
 header("Content-Disposition: attachment; filename=".$real_filename);
