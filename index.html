@@ -4,27 +4,66 @@
         <meta charset="utp-8">
         <title>Insert title here</title>
     </head>
+    <style>
+      #head {
+              border-bottom: 10px solid red;
+              color: black;
+              margin: 1px;
+              text-align: center;
+      }
 
+      ol {
+              display: grid;
+              color: black;
+              border-right: 5px solid pink;
+      }
+
+      #columns{
+        border:3px solid pink;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+      }
+
+      #main_grid{
+        padding-left: 30px;
+        padding-top: 30px;
+        font-size: 30px;
+      }
+
+    </style>
     <body>
-    <h1> 영화 다운로드 </h1>
+      <div id="head">
+        <h1> 영화 다운로드 </h1>
+      </div>
+      <div id="columns">
         <ol>
-        <?php
-        $list = scandir('movie');
-        $i = 0;
-        while($i < count($list)){
-            if($list[$i] != '.'){
-                if($list[$i] != '..'){
-                    ?>
-                    <li><?=$list[$i]?> ===> <a href="download.php?filename=<?=$list[$i]?>">다운로드</a></li>
-                    <video width="320" height="240" controls>
-                      <source src="http://175.211.145.62/movie/<?=$list[$i]?>" type="video/mp4">
-                    </video>
-                    <?php
-                }
-            }
-            $i = $i + 1;
-        }
-        ?>
+            <li><a href="korea_movie.html">한국영화보기</a></li>
+            <li><a href="nkorea_movie.html">외국영화보기</a></li>
         </ol>
+        <div id="main_grid">
+            <a>o 말모이</a><br />
+            <video width="320" height="240" controls>
+            <source src="http://175.211.145.62/movie/말모이.mp4" type="video/mp4">
+        </div>
+      </div>
     </body>
 </html>
+<!--
+<?php
+$list = scandir('movie_data');
+$i = 0;
+while($i < count($list)){
+  if($list[$i] != '.'){
+      if($list[$i] != '..'){
+          ?>
+          <li><?=$list[$i]?> ===> <a href="download.php?filename=<?=$list[$i]?>">다운로드</a></li>
+          <video width="320" height="240" controls>
+            <source src="http://175.211.145.62/movie/<?=$list[$i]?>" type="video/mp4">
+          </video>
+          <?php
+      }
+  }
+  $i = $i + 1;
+}
+?>
+-->
