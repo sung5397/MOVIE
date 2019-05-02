@@ -16,6 +16,8 @@
               display: grid;
               color: black;
               border-right: 5px solid pink;
+              margin: 0px;
+              padding: 30px;
       }
 
       #columns{
@@ -25,27 +27,38 @@
       }
 
       #main_grid{
-        padding-left: 30px;
-        padding-top: 30px;
-        font-size: 30px;
+        padding: 30px;
+        font-size: 20px;
       }
 
     </style>
     <body>
       <div id="head">
-        <h1> 영화 다운로드 </h1>
+        <h1> 영화 감상 </h1>
       </div>
       <div id="columns">
         <ol>
-            <li><a href="korea_movie.html">한국영화보기</a></li>
-            <li><a href="nkorea_movie.html">외국영화보기</a></li>
+            <li><a href="index.html">한국영화보기</a></li>
+            <li><a></a>외국영화보기</li>
         </ol>
         <div id="main_grid">
-            <a>o 말모이</a><br />
-            <video width="320" height="240" controls>
-            <source src="http://175.211.145.62/movie/말모이.mp4" type="video/mp4">
+          <li>말모이<br /><video width="240" height="180" controls>
+              <source src="http://175.211.145.62/movie/말모이.mp4" type="video/mp4"></li><br />
+          <li>극한직업<br />
+            <video width="240" height="180" controls>
+            <source src="http://175.211.145.62/movie/극한직업.mp4" type="video/mp4"></li>
+          <li>사바하<br />
+            <video width="240" height="180" controls>
+            <source src="http://175.211.145.62/movie/사바하.mp4" type="video/mp4"></li>
+          <li>뺑반<br />
+            <video width="240" height="180" controls>
+            <source src="http://175.211.145.62/movie/뺑반.mp4" type="video/mp4"></li>
+          <li>자전차왕엄복동<br />
+            <video width="240" height="180" controls>
+            <source src="http://175.211.145.62/movie/자전차왕엄복동.mp4" type="video/mp4"></li>
         </div>
       </div>
+      <a>(다운로드 없이 화면을 키워서 바로 감상하실 수 있습니다.)</a>
     </body>
 </html>
 <!--
