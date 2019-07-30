@@ -11,7 +11,6 @@
               margin: 1px;
               text-align: center;
       }
-
       ol {
               display: grid;
               color: black;
@@ -19,18 +18,15 @@
               margin: 0px;
               padding: 30px;
       }
-
       #columns{
         border:3px solid pink;
         display: grid;
         grid-template-columns: 200px 1fr;
       }
-
       #main_grid{
         padding: 30px;
         font-size: 20px;
       }
-
     </style>
     <body>
       <div id="head">
@@ -42,23 +38,11 @@
             <li><a></a>외국영화보기</li>
         </ol>
         <div id="main_grid">
-          <li>말모이<br /><video width="240" height="180" controls>
-              <source src="http://175.211.145.62/movie/말모이.mp4" type="video/mp4"></li><br />
-          <li>극한직업<br />
-            <video width="240" height="180" controls>
-            <source src="http://175.211.145.62/movie/극한직업.mp4" type="video/mp4"></li>
-          <li>사바하<br />
-            <video width="240" height="180" controls>
-            <source src="http://175.211.145.62/movie/사바하.mp4" type="video/mp4"></li>
-          <li>뺑반<br />
-            <video width="240" height="180" controls>
-            <source src="http://175.211.145.62/movie/뺑반.mp4" type="video/mp4"></li>
-          <li>자전차왕엄복동<br />
-            <video width="240" height="180" controls>
-            <source src="http://175.211.145.62/movie/자전차왕엄복동.mp4" type="video/mp4"></li>
+          <li>롱리브더킹<br /><video width="240" height="180" controls>
+              <source src="http://218.148.200.6/movie/롱리브더킹.mp4" type="video/mp4"></li>
         </div>
       </div>
-      <a>(다운로드 없이 화면을 키워서 바로 감상하실 수 있습니다.)</a>
+      <a>(다운로드 없이 바로 감상하실 수 있습니다.)</a>
     </body>
 </html>
 <!--
@@ -71,7 +55,7 @@ while($i < count($list)){
           ?>
           <li><?=$list[$i]?> ===> <a href="download.php?filename=<?=$list[$i]?>">다운로드</a></li>
           <video width="320" height="240" controls>
-            <source src="http://175.211.145.62/movie/<?=$list[$i]?>" type="video/mp4">
+            <source src="http://218.148.200.6/movie/<?=$list[$i]?>" type="video/mp4">
           </video>
           <?php
       }
