@@ -2,11 +2,33 @@
 <html>
     <head>
         <meta charset="utp-8">
-        <title>최신 영화관</title>
+        <title>Insert title here</title>
     </head>
+
     <body>
-      <h1>
-      <br><br><br><br><br>여기는 영화관입니다. <a href="http://kimsmovie.iptime.org/theater.php">입장하기</a>
-      </h1>    
+    <h1> 영화 다운로드 </h1>
+        <ol>
+        <?php
+        $list = scandir('movie');
+        $i = 0;
+        while($i < count($list)){
+            if($list[$i] != '.'){
+                if($list[$i] != '..'){
+                    ?>
+                    <li><?=$list[$i]?> ===> <a href="download.php?filename=<?=$list[$i]?>">다운로드</a></li>
+                    <video width="320" height="240" controls>
+                      <source src="http://kimsmovie.iptime.org/movie/<?=$list[$i]?>" type="video/mp4">
+                    </video>
+                    <?php
+                }
+            }
+            $i = $i + 1;
+        }
+        ?>
+        </ol>
+
+        <?php
+        echo date('y-m-d H:i:s');
+        ?>
     </body>
 </html>
