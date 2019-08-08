@@ -4,75 +4,10 @@
         <meta charset="utp-8">
         <title>최신 영화관</title>
     </head>
-    <style>
-      #head {
-              border-bottom: 10px solid red;
-              color: black;
-              margin: 1px;
-              text-align: center;
-      }
-      ol {
-              display: grid;
-              color: black;
-              border-right: 5px solid pink;
-              margin: 0px;
-              padding: 30px;
-      }
-      #columns{
-        border:3px solid pink;
-        display: grid;
-        grid-template-columns: 200px 1fr;
-      }
-      #main_grid{
-        padding: 30px;
-        font-size: 20px;
-      }
-    </style>
     <body>
       <div id="head">
         <h1> 인터넷 영화관 </h1>
       </div>
-      <div id="columns">
-        <ol>
-            <li>최신 한국영화</a></li>
-        </ol>
-        <div id="main_grid">
-            <?php
-            $list = scandir('movie');
-            ?><font color="blue">현재 상영중인 영화는 총<?=count($list)-2?>편입니다.<br><br><br></font>
-            <?php
-            $i = 0;
-            while($i < count($list)){
-              if($list[$i] != '.'){
-                  if($list[$i] != '..'){
-                      ?>
-                      <font color="red"><?=$list[$i]?>&nbsp;&nbsp;&nbsp;</font>
-                      <?php
-                  }
-              }
-              $i = $i + 1;
-            }
-            ?><font color="red">(가나다순)<br><br><br></font><?php
-            $i = 0;
-            while($i < count($list)){
-              if($list[$i] != '.'){
-                  if($list[$i] != '..'){
-                      ?>
-                      <a href="http://kimsmovie.iptime.org/movie/<?=$list[$i]?>">
-                      <img src="http://kimsmovie.iptime.org/movie_image/<?=$list[$i]?>.jpg" width="100" height="140"></a>&nbsp;&nbsp;&nbsp;
-                      <?php
-                      $j = $i - 1;
-                      if(fmod($j,5)==0){
-                        ?><br><?php
-                      }
-                  }
-              }
-              $i = $i + 1;
-            }
-            ?>
-        </div>
-      </div>
-      <a>(다운로드 없이 해당 영화를 클릭하시고 기다리시면 바로 감상하실 수 있습니다.)</a>
-
+      <a href="http://kimsmovie.iptime.org/theater.php" target="_self">입장하기</a>
 </body>
 </html>
